@@ -1,0 +1,41 @@
+/* Emily Roest, 260960015 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    background: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flock-logo {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .header-title {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .user-section {
+    font-size: 0.9rem;
+  }
+  
+  .content-container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+  }
+  

@@ -1,0 +1,212 @@
+/* Jacob Weldon 260986471 */
+.request-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.request-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.header-section {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.label-section {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: left;
+}
+
+.title-section {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+
+.empty-section {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.input-section {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+}
+
+.professor-name {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.lookup-title {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    color: #000000;
+    font-size: 1.5rem;
+}
+
+.professor-name p {
+    font-family: "Poppins", sans-serif;
+    color: #828282;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.input-search {
+    width: 200px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    padding: 8px 12px;
+    color: rgb(88, 88, 88);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+}
+
+.lookup-button2 {
+    padding: 10px 20px;
+    font-family: "Poppins", sans-serif;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.lookup-button:hover {
+    background-color: #eb5757;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.meeting-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.meeting-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.meeting-inputs {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lookup-task {
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    margin-bottom: 4px;
+    color: #414141;
+    font-size: 1rem;
+}
+
+.input {
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    color: rgb(88, 88, 88);
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+}
+
+.meeting-inputs button.lookup-button2 {
+    align-self: flex-start;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.meeting-inputs button.lookup-button2:hover {
+    background-color: #eb5757;
+}
+
+@media (max-width: 768px) {
+    .header-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: 10px;
+    }
+
+    .label-section {
+        display: none; /* Hides the label for smaller screens */
+      }
+
+    .label-section,
+    .title-section,
+    .input-section,
+    .professor-name {
+        grid-column: 1 / 2;
+        text-align: center;
+    }
+
+    .input-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .input-search {
+        width: 40%;
+        max-width: 300px;
+    }
+
+    .lookup-button2 {
+        width: 20%;
+    }
+
+    .lookup-button {
+        width: 50%;
+    }
+
+    .meeting-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meeting-details,
+    .meeting-inputs {
+        width: 100%;
+    }
+
+    .meeting-inputs button.lookup-button {
+        width: 100%;
+    }
+}

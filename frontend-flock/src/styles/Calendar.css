@@ -1,0 +1,134 @@
+/* Emily Roest, 260960015 */
+.styled-calendar-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  flex: 1;
+  justify-content: left;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.month-year {
+  margin: 0 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.nav-arrow{
+  border: none;
+  color: #000 !important;
+  background-color: #EFEFEF !important;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 32px;
+  text-align: center;
+}
+
+.days-container {
+  background: #212121;
+  border-radius: 50px;
+  padding: 20px;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.days-header-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.day-header {
+  flex: 1;
+  text-align: center;
+  color: #CBCBCB;
+}
+
+.day-header.placeholder {
+  flex: 0 0 50px; 
+}
+
+.day-name {
+  font-size: 0.8rem;
+}
+
+.day-date {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.days-grid {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.times-column {
+  flex: 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+
+.time-row {
+  height: 9px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-right: 5px;
+}
+
+.hour-label {
+  font-size: 15px;
+  color: #CCC;
+  line-height: 0;
+}
+
+.day-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.hour-slot {
+  height: 8px;
+  border-top: 1px solid #333;
+  position: relative;
+}
+
+.hour-slot.unavailable {
+  background-color: #A09999;
+  cursor: not-allowed;
+  border-radius: 4px;
+}
+
+.hour-slot.selected {
+  background-color: #FF2424;
+  border-radius: 10px;
+}
+
+.hour-slot.current-selection {
+  background-color: lightcoral;
+  border-radius: 10px;
+}
+
+.hour-slot.current-selection-grey {
+  background-color: #D3D3D3;
+  border-radius: 10px;
+}
+
+.day-column .hour-slot:nth-child(6n -5) {
+  border-top: 2px solid #413d3d; 
+}
