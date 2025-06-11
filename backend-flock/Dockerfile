@@ -1,10 +1,16 @@
 FROM node:18
 
 WORKDIR /app
-COPY ./backend-flock/package*.json ./
+
+# Copy root-level package files (backend package.json is in root)
+COPY package*.json ./
+
 RUN npm install
 
-COPY ./backend-flock .
+# Copy only backend code
+COPY ./backend-flock ./backend-flock
+
+WORKDIR /app/backend-flock
 
 EXPOSE 5001
 

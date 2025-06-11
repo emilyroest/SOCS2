@@ -1,11 +1,12 @@
-version: '3.8'
 services:
   backend:
-    build: ./backend-flock
+    build:
+      context: .
+      dockerfile: backend-flock/Dockerfile
     ports:
       - "5001:5001"
     environment:
-      - MONGODB_URI=your_mongo_uri
+      - MONGODB_URI=mongodb+srv://Emily:oTeqT05STG5XDNXM@cluster0.sdghp.mongodb.net/
       - JWT_SECRET=your_jwt
       - EMAIL_USER=...
       - EMAIL_PASS=...
@@ -15,7 +16,9 @@ services:
       - mongo
 
   frontend:
-    build: ./frontend-flock
+    build:
+      context: ./frontend-flock
+      dockerfile: Dockerfile
     ports:
       - "3000:80"
     depends_on:
@@ -25,3 +28,8 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
