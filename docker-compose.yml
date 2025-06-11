@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend-flock
+    ports:
+      - "5001:5001"
+    environment:
+      - MONGODB_URI=your_mongo_uri
+      - JWT_SECRET=your_jwt
+      - EMAIL_USER=...
+      - EMAIL_PASS=...
+      - EMAIL_PORT=...
+      - EMAIL_HOST=...
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./frontend-flock
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
